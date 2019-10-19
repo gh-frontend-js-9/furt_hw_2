@@ -1,9 +1,12 @@
 *{
 	margin: 0px;
 	box-sizing: border-box;
-	font-family: 'Lato';
+	
 }
-
+.body {
+	width: 2000px;
+	font-family: 'Lato';	
+}
 /*header*/
 .top-block {
 	display: flex;
@@ -11,7 +14,6 @@
 	justify-content: center;
 	align-items: center;
 
-	width: 2000px;
 	height: 72px;
 
 	background-color:#194277;
@@ -35,9 +37,9 @@
 	border: none;
 	border-radius: 15px;
 	background-color: #ffffff;
+	cursor: pointer;
 }
 .accept-text {
-	/* Style for "Accept" */
 	width: 41px;
 	height: 12px;
 
@@ -48,30 +50,60 @@
 	font-size: 12px;
 	font-weight: 700;
 	line-height: 16.36px;
-	/* Text style for "A, ccept" */
 	letter-spacing: 0.55px;
 }
 
 /*section-1*/
-.right-list-btn {
-	position: absolute;
-	left: 1544px;
-	top: 103px;
-	
-	width: 25px;
-	height: 19px;
-
-	cursor: pointer;
-	border: none;
-	background-color: transparent;
-}
-
 .section-1 {
-	width: 2000px;
 	height: 872px;
+
 	background-color: #3695ff;
 	background-image:url(img/background.png);
 }
+
+
+#menu-switch {
+  opacity: 0;
+}
+.hamburger-menu{
+	position: absolute;
+	left: 1544px;
+	top: 103px;
+}
+.menu-btn {
+  cursor: pointer;
+  z-index: 1;
+}
+.menu-box {
+  display: block;
+  visibility: hidden;
+
+  width: 210px;
+  height: 320px;
+
+  padding: 20px 0;
+  list-style: none;
+  background-color:#ffffff;
+}
+
+.menu-item {
+  display: block;
+
+  padding: 12px 24px;
+  color: #194277;
+
+  font-size: 23px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu-item:hover {
+  background-color: #CFD8DC;
+}
+#menu-switch:checked ~ .menu-box {
+  visibility: visible;
+}
+/*//hamburger*/
+
 .disk {
 	position: absolute;
 	left: 929px;
@@ -121,7 +153,6 @@
 	line-height: 60px;
 	text-align: center;
 	text-transform: uppercase;
-	/* Text style for "free portf" */
 	letter-spacing: 1.25px;
 }
 .lorem-ipsum {
@@ -139,7 +170,6 @@
 	line-height: 35px;
 	text-align: center;
 	text-transform: uppercase;
-	/* Text style for "L, orem ip" */
 	letter-spacing: 0.4px;
 }
 
@@ -155,10 +185,10 @@
 	border: none;
 	border-radius: 28px;
 	background-color: #ffffff;
+	cursor: pointer;
 }
 
 .hire-me-text {
-	/* Style for "hire me" */
 	width: 65px;
 	height: 12px;
 	
@@ -169,14 +199,14 @@
 	font-weight: 700;
 	line-height: 30px;
 	text-transform: uppercase;
-	/* Text style for "h, ire me" */
 	letter-spacing: 0.4px;
 }
 .arrow {
 	position: absolute;
 	top: 816px;
 	left: 991px;
-	}
+}
+
 
 /*section-2*/
 .section-2{
@@ -186,7 +216,6 @@
 	flex-direction: column;
 
 	height: 400px;
-	width: 2000px;
 }
 .caption {
 	width: 500px;
@@ -199,7 +228,7 @@
 	line-height: 35.12px;
 }
 
-.text {
+.text-sec-2 {
 	width: 1010px;
 	margin: 50px 0px;
 	
@@ -211,14 +240,12 @@
 	line-height: 35px;
 }
 
-
 .section-3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 
-	width: 2000px;
 	height: 1145px;
 	background-color: #f1f8ff;
 }
@@ -231,10 +258,10 @@
 
 	width: 1300px;
 }
-.expert-in-block {
+.expert-block {
 	margin: 20px;
 }
-.expert-in-img {
+.expert-img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -242,7 +269,7 @@
 	width: 135px;
 	height: 135px;
 
-	margin: 55px;
+	margin: 55px 105px;    
 
 	border: 1px solid #b7c0c9;
 	border-radius: 70px;
@@ -276,7 +303,6 @@
 	justify-content: center;
 	flex-direction: column;
 
-	width: 2000px;
 	height: 1145px;
 }
 .latest-works-block {
@@ -288,16 +314,21 @@
 
 	width: 1300px;
 }
-.latest-works-block div{
-	width: 359px;
-	height: 269px;
-
+.latest-works-block li{
 	margin: 20px;
 	
+	list-style-type: none;
 	border-radius: 10px;
 	border: 1px solid #f4f4f4;
 	background-color: #f4f4f4;
 }
+.latest-works-block a {
+	display: block;
+
+	width: 359px;
+	height: 269px;
+}
+
 .work-1 {
 	background: url(img/Work_1.png) center bottom no-repeat;
 }
@@ -324,7 +355,6 @@
 	justify-content: center;
 	flex-direction: column;
 
-	width: 2000px;
 	height: 363px;
 	background-color: #f1f8ff;
 }
@@ -336,6 +366,9 @@
     width: 1100px;
     margin-top: 90px;
 }
+.clients li {
+	list-style-type: none;
+}
 .clients img {
 	filter: grayscale(1) opacity(0.4);
 }
@@ -346,7 +379,6 @@
 	justify-content: center;
 	flex-direction: row;
 
-	width: 2000px;
 	height: 247px;
 
 	background-color: #e8f3ff;
@@ -361,6 +393,7 @@
 }
 .graphic {
 	color: #ffffff;
+
 	font-size: 50px;
 	font-weight: 300;
 }
@@ -370,6 +403,7 @@
 	font-weight: 700;
 	font-size: 50px;
 }
+
 /*button*/
 .btn-foot {
 	width: 204px;
@@ -378,4 +412,5 @@
 	border: none;
 	border-radius: 28px;
 	background-color: #ffffff;
+	cursor: pointer;
 }
